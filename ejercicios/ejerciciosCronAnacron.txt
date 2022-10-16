@@ -1,0 +1,26 @@
+ESTO VA EN CRONTAB
+
+# Ejemplo: 
+# .---------------- minutos (00 - 59)
+# | .-------------- horas (00 - 23)
+# | | .------------ días del mes (1 - 31)
+# | | | .---------- mes (1 - 12 ó jan, feb, mar, apr, ...)
+# | | | | .-------- días de la semana (domingo=0 - 7 ó sun, mon, tue, wed, ...)
+# | | | | |
+# * * * * * Comando
+
+# * * * * * /home/martin/Documentos/pruebaCron.sh
+# * * * * * touch >> /home/martin/Documentos/archivoCron.txt
+# * * * * * date >> /home/martin/Documentos/archivoCron.txt
+# * * * * * ls -l /home/martin >> /home/abelmb/Documentos/archivoCron.txt
+
+ESTO VA EN ANACRONTAB 
+
+#.------------ Dias_de_retraso
+#| .---------- Minutos_de_retraso
+#| | .-------- Identificador
+#| | | .------ Comando/script
+#| | | |
+#@daily 5 pruebaCron.daily /home/abelmb/Documentos/pruebaCron.sh
+@daily 1 pruebaAnacron.daily /home/abelmb/Documentos/pruebaAnacron.sh
+
